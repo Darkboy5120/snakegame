@@ -12,8 +12,6 @@ size = width, height = 640, 480
 pygame.display.set_caption('Snake Game')
 
 #global variables
-speed = [0, 0]
-#pygame.mouse.set_visible(0)
 screen = pygame.display.set_mode(size)
 
 #textviews
@@ -26,10 +24,6 @@ textviews = {
 def exit():
     pygame.quit()
     sys.exit()
-
-#image = pygame.image.load("assets/images/pc.jpg")
-#imagerect = image.get_rect()
-#rect0 = Rect(200, 200, 50, 80)
 
 while 1:
     #get all pressed keys
@@ -59,20 +53,10 @@ while 1:
         if pressedKeys[pygame.K_s]: speed[1] = +1
         if pressedKeys[pygame.K_d]: speed[0] = +1
 
-    #rect0 = rect0.move(speed)
-    speed = [0, 0]
-    
-    #if imagerect.left < 0 or imagerect.right > width:
-    #    speed[0] = -speed[0]
-    #if imagerect.top < 0 or imagerect.bottom > height:
-    #    speed[1] = -speed[1]
-
-    #screen.blit(image, imagerect)
     screen.fill(Default.menu_bg_color)
 
     #draw textviews
     [textviews[name].draw(screen) for name in textviews]
 
-    #pygame.draw.rect(screen, black, rect0)
     pygame.display.flip()
     pygame.time.delay(fps)
