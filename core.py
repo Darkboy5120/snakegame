@@ -47,12 +47,6 @@ while 1:
             else:
                 textview.default()
 
-    if pressedKeys != None:
-        if pressedKeys[pygame.K_w]: speed[1] = -1
-        if pressedKeys[pygame.K_a]: speed[0] = -1
-        if pressedKeys[pygame.K_s]: speed[1] = +1
-        if pressedKeys[pygame.K_d]: speed[0] = +1
-
     screen.fill(Default.menu_bg_color)
 
     #draw textviews
